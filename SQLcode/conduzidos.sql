@@ -28,7 +28,7 @@ SELECT oco.numero_ocorrencia,
                FROM db_bisp_reds_reporting.tb_ocorrencia AS oco
                LEFT JOIN db_bisp_reds_reporting.tb_envolvido_ocorrencia AS env
                     ON oco.numero_ocorrencia = env.numero_ocorrencia
-               WHERE oco.data_hora_fato >= '2024-01-01 00:00:00.000'
+               WHERE oco.data_hora_fato >= '2024-01-01 00:00:00.000' -- aqui entram os 'filtros'
                AND oco.data_hora_fato < '2025-02-26 00:00:00.000'
                AND oco.ocorrencia_uf = 'MG'
                AND oco.ind_estado IN ('F', 'R')
